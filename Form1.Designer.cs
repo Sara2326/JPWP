@@ -37,6 +37,7 @@ namespace JPWP
             this.Letter5 = new System.Windows.Forms.Label();
             this.Letter6 = new System.Windows.Forms.Label();
             this.LetterDisplay = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // Input
@@ -124,11 +125,19 @@ namespace JPWP
             this.LetterDisplay.Size = new System.Drawing.Size(0, 24);
             this.LetterDisplay.TabIndex = 9;
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(517, 120);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(282, 279);
+            this.panel1.TabIndex = 10;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.LetterDisplay);
             this.Controls.Add(this.Letter6);
             this.Controls.Add(this.Letter5);
@@ -154,6 +163,7 @@ namespace JPWP
         private System.Windows.Forms.Label Letter5;
         private System.Windows.Forms.Label Letter6;
         private System.Windows.Forms.Label LetterDisplay;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

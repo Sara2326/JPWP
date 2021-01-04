@@ -39,7 +39,6 @@ namespace JPWP
                 letters[index].Text = checkword;
                 tab[index] = null;
                 LetterDisplay.BackColor = Color.Green;
-
             }
             else
             {
