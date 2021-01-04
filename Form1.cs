@@ -13,13 +13,20 @@ namespace JPWP
     public partial class Form1 : Form
     {
             
-            static string[] words = { "b a n a n a", "r a m o t a", "h u m b u g", "l a d a c o", "b l u r b" };
-            static int a = 0;
-            static string[] tab = words[a].Split(' ');
+          //  static string[] words = { "b a n a n a", "r a m o t a", "h u m b u g", "l a d a c o", "b l u r b" };
+        Dictionary<string, string> words = new Dictionary<string, string>(){
+            {"r.a.m.o.t.a", "Kicz literacki"},
+            {"h.u.m.b.u.g", "Kłamstwo"},
+            {"l.a.d.a.c.o", "Człowiek lekkomyślny"},
+            {"b.l.u.r.b", "Notka reklamowa" },
+            {"p.r.o.d.i.ż", "Pokolenie w średnim wieku" }
+        };
+        static int a = 0;
+        static string[] tab = words.ElementAt(a).Key.Split('.');
         public Form1()
-             {
+        {
                  InitializeComponent();
-             }
+        }
 
             private void Form1_Load(object sender, EventArgs e)
             {
@@ -52,7 +59,7 @@ namespace JPWP
                 if (Array.TrueForAll(tab, el => el == null))
                 {
                     a++;
-                    tab = words[a].Split(' ');
+                    tab = words[a].Split('.');
                     Console.WriteLine("aaa");
                     Array.ForEach(letters, letter => letter.Text = "-");
                 }
@@ -60,6 +67,10 @@ namespace JPWP
             }
             
 
+
+        }
+        private void snake()
+        {
 
         }
 
