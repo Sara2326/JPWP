@@ -50,7 +50,6 @@ namespace JPWP
             else if (!Array.Exists(tab, element => element == checkword))
             {
                 
-                panel1.Refresh();
                 LetterDisplay.BackColor = Color.Red;
 
                 if (checkword != "1")
@@ -81,10 +80,6 @@ namespace JPWP
             }
 
 
-        }
-        private void Graphics()
-        {
-            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -130,7 +125,7 @@ namespace JPWP
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            snake.draw(e);
+
 
         }
       
