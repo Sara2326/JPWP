@@ -38,6 +38,9 @@ namespace JPWP
             this.Letter6 = new System.Windows.Forms.Label();
             this.LetterDisplay = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Definition = new System.Windows.Forms.Label();
+            this.Used = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Input
@@ -127,16 +130,52 @@ namespace JPWP
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(517, 120);
+            this.panel1.Location = new System.Drawing.Point(451, 192);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(282, 279);
+            this.panel1.Size = new System.Drawing.Size(325, 203);
             this.panel1.TabIndex = 10;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // Definition
+            // 
+            this.Definition.AutoSize = true;
+            this.Definition.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.Definition.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Definition.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.Definition.Location = new System.Drawing.Point(76, 84);
+            this.Definition.Name = "Definition";
+            this.Definition.Size = new System.Drawing.Size(259, 31);
+            this.Definition.TabIndex = 11;
+            this.Definition.Text = "Wciśnij 1, by zacząć";
+            // 
+            // Used
+            // 
+            this.Used.AutoSize = true;
+            this.Used.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Used.Location = new System.Drawing.Point(77, 150);
+            this.Used.Name = "Used";
+            this.Used.Size = new System.Drawing.Size(230, 29);
+            this.Used.TabIndex = 12;
+            this.Used.Text = "Wykorzystane literki:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(91, 359);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(296, 16);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Po zakończeniu słowa wciśnij q, by przejść dalej";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Used);
+            this.Controls.Add(this.Definition);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.LetterDisplay);
             this.Controls.Add(this.Letter6);
@@ -164,6 +203,9 @@ namespace JPWP
         private System.Windows.Forms.Label Letter6;
         private System.Windows.Forms.Label LetterDisplay;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label Definition;
+        private System.Windows.Forms.Label Used;
+        private System.Windows.Forms.Label label1;
     }
 }
 
